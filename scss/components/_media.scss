@@ -1,0 +1,671 @@
+@include for-desktop(){
+    .navbar{
+        form{
+            max-width: 300px;
+        }
+    }
+
+// ========================================= main
+
+    // =============================== home
+    .home_one{
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .objective{
+        flex-direction: column;
+        align-items: center;
+        &_card{
+            order: -2;
+        }
+    }
+
+// ================================= footer
+    footer{
+        margin: 0;
+        border-radius: 0;
+    }
+    .footer{
+        &_top{
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        &_description{
+            @include flex-items;
+            flex-direction: column;
+            p{
+                text-align: center;
+            }
+        }
+        &_ul{
+            max-width: 140px;
+        }
+    }
+}
+
+@include for-large-desktop(){
+    .navbar{
+        gap: 16px;
+        &_items{
+            gap: 10px;
+            select{
+                font-size: 14px;
+            }
+        }
+        &_link{
+            font-size: 14px;
+        }
+        .btn, &_btn{
+            font-size: 14px;
+            padding: 10px 28px;
+        }
+    }
+// ========================================= main
+
+// ===================================== home
+    .home_one{
+        padding: 60px 0;
+    }
+    .mentor{
+        flex-direction: column;
+        &_text{
+            align-items: center;
+            h1{
+                text-align: center;
+                font-size: 56px;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+    .become{
+        &_tescription{
+            max-width: 450px;
+        }
+    }
+    .corusel{
+        &_text{
+            max-width: 480px;
+        }
+    }
+
+    .blog_card{
+        &_text{
+            max-width: 440px;
+        }
+    }
+
+}
+
+
+@include for-large-tablet(){
+    .home_main{
+        padding-top: 100px;
+    }
+    header{
+        height: 100px;
+    }
+    .navbar{
+        & *{
+            font-size: 18px !important;
+            color: $text-title-color !important;
+        }
+        &_items{
+            position: absolute;
+            width: 60vw;
+            height: calc(100vh - 90px);
+            background-color: #ffffffd0;
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: all 0.5s ease-in-out;
+            transform: translateX(100%);
+            top: 100%;
+            right: 0;
+            gap: 24px;
+        }
+        .burger_menu{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 24px;
+            height: 24px;
+            span{
+                width: 100%;
+                background-color: $text-title-color;
+                height: 3px;
+                border-radius: 3px;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+    .open_menu{
+        .navbar{
+            & *{
+                color: $text-title-color !important;
+            }
+            &_items{
+                transform: translateX(0) !important;
+            }
+        }
+        .burger_menu_firstline{
+            position: absolute;
+            left: 2px;
+            top: 10px;
+            transform: rotate(135deg);
+        }
+        .burger_menu_centerline{
+            position: absolute;
+            left: 2px;
+            top: 10px;
+            transform: rotate(-135deg);
+        }
+        .burger_menu_lastline{
+            display: none;
+        }
+    }
+// ========================================= main
+
+
+// =========================================== home
+    .trending{
+        &_cards{
+            justify-content: space-around;
+        }
+    }
+    .become{
+        flex-direction: column;
+        &_bg{
+            height: 450px;
+        }
+        &_tescription{
+            order: -2;
+            max-width: 600px;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    .corusel{
+        &_box{
+            flex-direction: column;
+        }
+        &_text{
+            max-width: 590px;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    // ================================= courses
+    .courses_one{
+        padding-top: 140px;
+    }
+    .topics{
+        &_top{
+            h2{
+                font-size: 36px;
+            }
+            .btn{
+                width: auto;
+            }
+        }
+    }
+
+    .blog_card{
+        flex-direction: column;
+        align-items: center;
+        &_text{
+            max-width: 550px;
+            text-align: center;
+            @include flex-items;
+            flex-direction: column;
+        }
+    }
+
+}
+
+
+@include for-tablet(){
+// ========================================= main
+    //  =================================== home
+    .mentor{
+        &_text{
+            max-width: 520px;
+            h1{
+                font-size: 32px;
+                line-height: 40px;
+            }
+        }
+        &_icons{
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    .trending{
+        h2{
+            font-size: 32px;
+        }
+        &_btn{
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    .categories{
+        align-items: center;
+        h2{
+            font-size: 32px;
+            text-align: center;
+        }
+    }
+    .home_four{
+        &>img{
+            right: -70px;
+        }
+    }
+    .become{
+        &_tescription{
+            max-width: 450px;
+            h2{
+                font-size: 32px;
+            }
+        }
+    }
+    .corusel{
+        &_box{
+            gap: 32px;
+        }
+        &_text{
+            h3{
+                font-size: 24px;
+                line-height: 32px;
+            }
+            h4{
+                font-size: 20px;
+            }
+        }
+    }
+    .compony{
+        h2{
+            font-size: 32px;
+            line-height: 42px;
+        }
+    }
+    .latest{
+        align-items: center;
+        h2{
+            text-align: center;
+            font-size: 32px;
+        }
+    }
+
+    // ================================================ courses
+
+    .programing{
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 44px;
+        }
+    }
+    .popular{
+        @include flex-items;
+        flex-direction: column;
+        h2{
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+    .topics{
+        &_top{
+            flex-direction: column;
+            gap: 32px;
+            h2{
+                font-size: 32px;
+            }
+        }
+    }
+    .allcourses{
+        &_top{
+            h2{
+                font-size: 32px;
+            }
+            &_btns{
+                gap: 16px;
+            }
+            &_btn{
+                padding: 10px 20px;
+            }
+            .btn{
+                padding: 15px 20px;
+            }
+        }
+    }
+    
+    // ============================================== accound
+    .accound_two{
+        .full_card{
+            max-width: 440px;
+            h3{
+                font-size: 24px;
+                line-height: 32px;
+            }
+            &_round{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .accounts_block{
+        .line_link{
+            gap: 24px;
+            h3{
+                font-size: 20px;
+            }
+        }
+    }
+    .hero{
+        h1{
+            font-size: 44px;
+        }
+    }
+
+    .blog_card{
+        &_img{
+            max-width: 440px;
+            height: 350px;
+        }
+        &_text{
+            max-width: 550px;
+            text-align: center;
+            @include flex-items;
+            flex-direction: column;
+            h3{
+                font-size: 24px;
+                max-width: 320px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    .detail_hero{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        h1{
+            font-size: 36px;
+            max-width: 400px;
+            line-height: 48px;
+        }
+        p{
+            display: none;
+        }
+    }
+    .objective{
+        &_text{
+            h2{
+                text-align: center;
+                font-size: 28px;
+            }
+        }
+    }
+// ============================================ footer
+    .footer{
+        &_bottom{
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+
+
+@include for-large-mobile(){
+    .navbar{
+        form{
+            max-width: 200px;
+        }
+        &_items{
+            width: 100vw;
+            align-items: center;
+            padding: 30px  20px;
+        }
+    }
+// ========================================= main
+
+// ====================================== home
+    .mentor{
+        &_text{
+            max-width: 420px;
+            h1{
+                font-size: 28px;
+            }
+            form{
+                flex-wrap: wrap;
+                label{
+                    width: 90%;
+                    input{
+                        font-size: 14px;
+                    }
+                }
+                .btn{
+                    width: 100%;
+                }
+            }    
+        }    
+        &_img{
+            height: 450px;
+            .img_icon:first-child{
+                top: 20px;
+                left: 40px;
+            }
+            .img_icon:nth-child(2){
+                right: 0;
+                top: 120px;
+            }
+            .img_icon:nth-child(3){
+                top: 200px;
+                left: 20px;
+            }
+            .img_icon:last-child{
+                right: 20px;
+                bottom: 37px;
+            }
+        }
+    }
+
+    .trending{
+        h2{
+            font-size: 28px;
+        }
+    }
+    .categories{
+        h2{
+            font-size: 28px;
+        }
+    }
+    .become{
+        &_tescription{
+            max-width: 330px;
+            h2{
+                font-size: 28px;
+            }
+        }
+    }
+
+
+    // ================================================ courses
+
+    .programing{
+        h1{
+            font-size: 32px;
+            line-height: 44px
+        }
+    }
+    .popular{
+        @include flex-items;
+        flex-direction: column;
+        h2{
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .allcourses{
+        &_top{
+           flex-direction: column; 
+           gap: 24px;
+        }
+        &_block{
+            flex-direction: column;
+            align-items: center;
+        }
+        &_left{
+            padding: 0 32px;
+            border-left: 1px solid $text-in-field-color;
+        }
+    }
+    .hero{
+        h1{
+            font-size: 32px;
+        }
+    }
+// ============================================== accound
+
+    .accound_two{
+        .full_card{
+            max-width: 370px;
+            h3{
+                font-size: 18px;
+                line-height: 26px;
+            }
+            &_round{
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    .topics{
+        &_top{
+            h2{
+                font-size: 28px;
+            }
+        }
+    }
+
+    .detail_hero{
+        h1{
+            font-size: 26px;
+            max-width: 330px;
+        }
+        &_img{
+            flex-direction: column;
+        }
+        .hero_pak{
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        .hero_btns{
+            flex-direction: column;
+        }
+    }
+
+
+// ======================================= footer
+    .footer{
+        &_description{
+            max-width: 370px;
+        }
+        &_items{
+            flex-direction: column;
+            align-items: center;
+        }
+        &_ul{
+            align-items: center;
+        }
+        &_bottom{
+            span{
+                font-size: 14px;
+            }
+        }
+    }
+    .compony{
+        h2{
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        &_icons{
+            padding: 20px 10px;
+            gap: 32px;
+        }
+    }
+
+}
+
+@include for-mobile(){
+    .navbar{
+        form{
+            display: none;
+        }
+        &_items{
+            form{
+                display: flex;
+                max-width: 300px;
+            }
+        }
+    }
+// ========================================= main
+
+// ============================================ accound
+
+    .accounts_block{
+        .line_link{
+            gap: 16px;
+            h3{
+                font-size: 16px;
+                &::before{
+                    bottom: 0;
+                    height: 3px;
+                }
+            }
+        }
+    }
+
+// ========================================== home
+    .corusel{
+        &_text{
+            h3{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .allcourses{
+        &_top{
+            gap: 10px;
+            &_btns{
+                flex-direction: column;
+            }
+        }
+    }
+
+    .objective{
+        gap: 40px;
+        &_card{
+            max-width: 320px;
+            width: 100%;
+        }
+    }
+
+}

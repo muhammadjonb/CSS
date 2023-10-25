@@ -1,0 +1,336 @@
+.detail_one{
+    padding-top: 120px;
+    background-color: #666666;
+}
+.detail_hero{
+    padding: 30px 0;
+    p{
+        @include flex-items;
+        gap: 8px;
+        a{
+            font-size: 16px;
+            line-height: 32px;
+            color: $text-white;
+            font-family: $font1;
+        }
+        span{
+            font-size: 16px;
+            line-height: 32px;
+            color: $text-white;
+            font-family: $font1;
+        }
+    }
+    h1{
+        font-size: 48px;
+        line-height: 63px;
+        margin: 64px 0 24px 0;
+        max-width: 650px;
+        color: $text-white;
+    }
+    &_img{
+        @include flex-items;        
+        gap: 16px;
+        h4{
+            font-size: 24px;
+            line-height: 32px;
+            color: $text-white;
+        }
+        span{
+            font-size: 14px;
+            line-height: 24px;
+            color: $text-white;
+            font-family: $font1;
+        }
+    }
+    .hero_pak{
+        @include flex-items;
+        gap: 16px;
+        margin: 40px 0;
+        &_round{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $other-grey-color;
+        }
+        h4{
+            font-size: 24px;
+            line-height: 32px;
+            color: $text-white;
+        }
+    }
+    .hero_btns{
+        @include flex-items;
+        gap: 24px;
+        .btn{
+            padding: 6px 25px;
+            @include flex-items;
+            gap: 10px;
+            span{
+                font-size: 36px;
+            }
+            &:hover{
+                span{
+                    color: $btn-color !important;
+                }
+            }
+        }
+    }
+    .share_btn{
+        padding: 15px 25px;
+        border-radius: 8px;
+        border: none;
+        background-color: #FFF5F9;
+        @include flex-items;
+        color: $btn-color !important;
+        font-size: 16px;
+        font-family: $font1;
+        gap: 10px;
+    }
+}
+
+
+
+.detail_two{
+    padding: 80px 0;
+}
+.objective{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    &_text{
+        max-width: 710px;
+        width: 100%;
+        
+        h2{
+            font-size: 32px;
+            line-height: 48px;
+            color: $text-title-color;
+        }
+    }
+    .feature{
+        p{
+            font-size: 16px;
+            line-height: 27px;
+            color: $text-body-color;
+            font-family: $font1;
+            margin: 16px 0;
+        }
+    }
+    .checked{
+        padding: 80px 0;
+        h2{
+            margin-bottom: 30px;
+        }
+        &_cards{
+            background-color: #ff83b51a;
+            border-radius: 8px;
+            padding: 40px;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px 20px;
+            justify-content: space-between;
+        }
+        &_card{
+            max-width: 280px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            ion-icon{
+                color: $btn-color !important;
+                width: 28px;
+                height: 28px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 24px;
+                color: $text-title-color;
+                font-weight: 600;
+                font-family: $font1;
+            }
+        }
+    }
+    .requirement{
+        padding: 0 0 80px 0;
+        h2{
+            margin-bottom: 40px;
+        }
+        &_cards{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            background-color: #ff83b51a;
+            border-radius: 8px;
+            padding: 40px;
+            gap: 32px;
+        }
+        &_card{
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            ion-icon{
+                color: $btn-color !important;
+                font-size: 20px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 24px;
+                color: $text-title-color;
+                font-family: $font1;
+            }
+        }
+    }
+    .module{
+        .btn{
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+            padding: 16px 35px;
+            transition: 0.3s;
+        }
+        h2{
+            margin-bottom: 40px;
+        }
+        &_cards{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        &_card{
+            width: 100%;
+            h4{
+                padding: 24px 40px;
+                color: $text-title-color;
+                font-size: 16px;
+                font-family: $font1;
+                line-height: 32px;
+                background-color: #ff83b51a;
+                width: 100%;
+                @include flex-items;            
+                justify-content: space-between;
+
+            }
+        }
+        &_text{
+            // background-color: $text-white;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            border: 1px solid #E6E6E6;
+            padding: 40px
+        }
+        &_line{
+            @include flex-items;
+            justify-content: space-between;
+            h4{
+                background-color: transparent;
+                display: flex;
+                width: auto;
+                justify-content: flex-start;
+                padding: 0;
+                gap: 16px;
+            }
+            span{
+                color: $text-body-color;
+                font-size: 16px;
+                line-height: 32px;
+                font-family: $font1;
+            }
+        }
+    }
+
+
+    &_card{
+        max-width: 440px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $text-in-field-color;
+        overflow: hidden;
+        .card_img{
+            width: 100%;
+            height: 310px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        &_document{
+            padding: 24px;
+            h3{
+                @include flex-items;
+                color: $text-title-color;
+                font-size: 32px;
+                line-height: 48px;
+                border-bottom: 2px solid $text-title-color;
+                padding-bottom: 12px;
+                gap: 10px;
+                span{
+                    text-decoration: line-through;
+                    color: $text-in-field-color;
+                    font-size: 24px;
+                    font-family: $font1;
+                }
+            }
+            h4{
+                font-size: 24px;
+                line-height: 32px;
+                color: $text-title-color;
+                display: flex;
+                align-items: center;
+                margin: 24px 0 32px 0;
+                gap: 40px;
+            }
+            .card_btnred{
+                width: 115px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 16px;
+                padding: 16px 20px;
+                background-color: #EF233C;
+                color: $text-white;
+                border: 1px solid transparent;
+                &:hover{
+                    background-color: transparent;
+                    border-color: #EF233C;
+                    color: #EF233C !important;
+                }
+            }
+        }
+    }
+    .card_checkbox{
+        @include flex-items;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        gap: 24px;
+    }
+    .box_one{
+        max-width: 180px;
+        width: 100%;
+        @include flex-items;
+        gap: 16px;
+        h5{
+            font-size: 16px;
+            line-height: 24px;
+            color: $text-title-color;
+        }
+        ion-icon{
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            color: $text-white;
+            background-color: #4586D6;
+            border-radius: 50%;
+        }
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        button{
+            width: 100%;
+        }
+    }
+}

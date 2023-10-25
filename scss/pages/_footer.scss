@@ -1,0 +1,81 @@
+footer{
+    margin: 40px;
+    background-color: $other-navy;
+    padding: 80px 0 40px 0;
+    border-radius: 8px;
+    & *{
+        color: $text-white;
+    }
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &_top{
+        display: flex;        
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &_description{
+        max-width: 500px;
+        .logo_fill{
+            fill: $text-white;
+        }
+        p{
+            margin-top: 36px;
+            font-size: 16px;
+            line-height: 27px;
+            font-family: $font1;
+            opacity: .9;
+        }
+    }
+    &_items{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 560px;
+        width: 100%;
+        gap: 32px;
+    }
+    &_ul{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        h3{
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        li{
+            font-size: 16px;
+            line-height: 32px;
+            font-family: $font1;
+            font-weight: bold;
+            a{
+                font-size: 16px;
+                line-height: 32px;
+                font-family: $font1;
+                font-weight: bold;  
+            }
+        }
+    }
+    &_bottom{
+        width: 100%;
+        @include flex-items;
+        margin-top: 80px;
+        justify-content: space-between;
+        p{
+            @include flex-items;
+            gap: 40px;
+        }
+        span{
+            font-size: 16px;
+            line-height: 27px;
+            font-family: $font1;
+            opacity: 0.9;
+        }
+    }
+}

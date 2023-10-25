@@ -1,0 +1,79 @@
+.account_one{
+    height: 440px;
+    padding-top: 120px;
+    background-color: #666666;
+}
+
+.accound_two{
+    padding: 80px 0;
+    .full_card{
+        max-width: 560px;
+        @include flex-items;
+        gap: 24px;
+        &_round{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: $text-in-field-color;
+        }
+        h3{
+            display: flex;
+            align-items: flex-start;
+            font-size: 32px;
+            line-height: 48px;
+            color: $text-title-color;
+            flex-direction: column;
+            span{
+                color: $text-body-color;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.account_three{
+    padding: 40px 0 80px 0;
+}
+
+.accounts_block{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    .line_link{
+        width: 100%;
+        @include flex-items;
+        justify-content: space-evenly;
+        h3{
+            cursor: pointer;
+            position: relative;
+            color: $text-body-color;
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: 400;
+            transition: 0.4s;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                height: 5px;
+                width: 0;
+                background-color: transparent;
+                border-radius: 5px;
+                transition: 0.4s;
+            }
+            &:hover{
+                color: $text-title-color;
+                font-weight: 700;
+            }
+            &:hover::before{
+                width: 100%;
+                background-color: $btn-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include flex-items;
+    background-color: $text-white;
+    height: 120px;
+    transition: .5s;
+    z-index: 99;
+}
+.navbar{
+    width: 100%;
+    @include flex-items;
+    justify-content: space-between;
+    gap: 24px;
+    &_logo{
+        max-width: 160px;
+        width: 100%;
+        .logo_fill{
+            fill: #021934;
+        }
+    }
+    form{
+        max-width: 400px;
+        width: 100%;
+        @include flex-items;
+        justify-content: space-between;
+        background-color: $text-white;
+        border: 1px solid $text-in-field-color;
+        border-radius: 8px;
+        padding: 0 12px;
+        gap: 23px;
+        .search{
+            color: $text-body-color;
+        }
+    }
+    &_label{
+        width: 95%;
+        input{
+            padding: 12px 0;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            color: #3c3c3c;
+            font-family: $font1;
+            &::placeholder{
+                font-weight: 100;
+                color: $text-body-color;
+            }    
+        }
+    }
+    &_items{
+        @include flex-items;
+        gap: 24px;
+        form{
+            display: none;
+        }
+        select{
+            color: $text-title-color;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-family: $font1;
+        }
+    }
+    &_link{
+        font-size: 16px;
+        color: $text-title-color;
+        line-height: 32px;
+        font-family: $font1;
+    }
+    &_btn{
+        padding: 10px 32px;
+        border-radius: 8px;
+        color: $text-title-color;
+        border: 1px solid $text-title-color;
+        background-color: transparent;
+        font-size: 15px;
+        &:hover{
+            background-color: $text-title-color;
+            color: $text-white;
+
+        }
+    }
+    .burger_menu{
+        display: none;
+    }
+    &_account{
+        @include flex-items;
+        gap: 8px;
+        &_round{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: $other-grey-color;
+        }
+        span{
+            font-size: 14px;
+            line-height: 24px;
+            color: $text-white;
+        }
+    }
+}
+
+
+.navbar-shrink {
+    transition: .5s;
+    height: 90px;
+    box-shadow: 0 0 10px 5px #dadada;
+}
+
+.account{
+    header{
+        background-color: #666666;
+    }
+    .navbar{
+        & *{
+            color: $text-white;
+        }
+        input{
+            color: $text-title-color;
+            font-weight: 700;
+        }
+        &_logo{
+            .logo_fill{
+                fill: #fff !important;
+            }
+        }
+    }
+}
+@include for-large-tablet(){
+    .account{
+        .navbar{
+            &_items{
+                select{
+                    color: $text-title-color;
+                }
+            }
+            &_link{
+                color: $text-title-color;
+            }
+            &_account{
+                &_round{
+                    background-color: $text-title-color;
+                }
+                span{
+                    color: $text-title-color;
+            }   
+            }
+        }
+    }
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 2px solid $other-navy;
+  outline: none;
+  background-color: $text-title-color;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: $text-body-color;
+}

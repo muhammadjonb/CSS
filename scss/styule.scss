@@ -1,0 +1,49 @@
+@import './fonts';
+@import './variables';
+@import './mixins';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body, html{
+    font-family: 'Rubik';
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $text-title-color;
+    border-radius: 7px;
+}
+::-webkit-scrollbar-track{
+    background-color: $text-in-field-color;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+section{padding: 0 30px}
+a{text-decoration: none;}
+button{cursor: pointer; transition: .3s;}
+li{list-style: none;}
+input{outline: none}
+
+@import './pages/header';
+@import './pages/home';
+@import './pages/courses';
+@import './pages/detail';
+@import './pages/blog';
+@import './pages/account';
+
+@import './pages/footer';
+@import './components/buttons';
+@import './components/corusel';
+@import './components/media';
+@import './components/dark';

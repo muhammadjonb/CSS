@@ -1,0 +1,113 @@
+.blog_one{
+    padding-top: 120px;
+    height: 440px;
+    background-color: #666666;
+}
+.hero{
+    padding: 30px 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 60px;
+    p{
+        cursor: pointer;
+        a, span{
+            font-size: 16px;
+            line-height: 32px;
+            font-family: $font1;
+            color: $text-white;
+            font-weight: 500;
+        }
+    }
+    h1{
+        font-size: 64px;
+        line-height: 88px;
+        color: $text-white;
+    }
+}
+
+.blog_two{
+    padding: 80px 0;
+}
+.corusel_blog{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    .flex_span{
+        max-width: 320px;
+        justify-content: space-between;
+        span{
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            background-color: transparent;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $text-in-field-color;
+            cursor: pointer;
+            &:hover{
+                color: $text-white;
+                background-color: $btn-color;
+            }
+        }
+    }
+}
+.blog_cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}
+.blog_card{
+    width: 100%;
+    @include flex-items;
+    gap: 64px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 10px;
+    border-radius: 8px;
+    &_img{
+        max-width: 600px;
+        width: 100%;
+        height: 510px;
+        background-color: $text-in-field-color;
+        border-radius: 8px;
+    }
+    &_text{
+        max-width: 550px;
+        h3{
+            font-size: 32px;
+            line-height: 48px;
+            color: $text-title-color;
+        }
+        .span_flex{
+            @include flex-items;
+            gap: 16px;
+        }
+        .nuqta{
+            width: 8px;
+            height: 8px;
+            background-color: #4586D6;
+            border-radius: 50%;
+        }
+        span{
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            font-family: $font1;
+            color: $text-body-color;
+            margin: 16px 0;
+        }
+        p{
+            margin-bottom: 60px;
+            font-size: 16px;
+            line-height: 27px;
+            color: $text-body-color;
+            font-family: $font1;
+        }
+    }
+}

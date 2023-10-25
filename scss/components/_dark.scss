@@ -1,0 +1,103 @@
+.dark  {
+    background-color: $text-title-color;
+}
+
+.dark * {
+  color: white !important;
+}
+.dark_light{
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $text-title-color;
+    border: 2px solid $other-navy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    &:hover{
+        background-color: $text-body-color;
+        .moon{
+            color: $text-title-color;
+        }
+    }
+    .moon{
+        color: $text-body-color;
+        font-size: 24px;
+    }
+    .sunny{
+        display: none;
+    }
+}
+
+.dark{
+    .dark_light{
+        .moon{
+            display: none;
+        }
+        .sunny{
+            display: block;            
+            font-size: 24px;
+            color: $text-white;
+        }
+    }
+    header{
+        background-color: $text-title-color;
+    }
+    .navbar-shrink{
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+    }
+    .navbar{
+        form{
+            .search{
+                color: $text-body-color !important;
+            }
+        }
+        &_label{
+            input{
+                color: $text-title-color !important;
+                &::placeholder{
+                    color: $text-body-color !important;
+                }
+            }
+        }
+        &_logo{
+            .logo_fill{
+                fill: $text-white;
+            }
+        }
+    }
+    .account_one{
+        background-color: rgba(128, 128, 128, 0.4);
+    }
+    .burger_menu{
+        span{
+            background-color: $text-white;
+        }
+    }
+    .allcourses{
+        &_top{
+            &_btn{
+                color: $btn-color !important;
+            }
+        }
+    }
+    .blog_one{
+        background-color: $text-title-color;
+    }
+    .detail_one{
+        background-color: $text-title-color;
+    }
+}
+
+@include for-large-mobile(){
+    .dark_light{
+        right: 20px;
+    }
+    #myBtn{
+        right: 10px;
+    }
+}
